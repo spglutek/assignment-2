@@ -1,0 +1,235 @@
+/*Spencer Glutek (8998254)*/
+body{
+    width: 1200px;
+    margin: auto;
+    font: 16px Georgia, serif;
+    padding: 10px;
+    background-color: rgb(232, 232, 232);
+}
+
+.structural{
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 0px;
+    margin: 10px;
+}
+
+header{
+    text-align: center;
+    background-image:linear-gradient(rgb(119, 0, 0), rgb(0, 0, 128));
+    padding:20px;
+}
+header h1{
+    color:white;
+}
+h1, h2{
+    color: rgb(210, 0, 210);
+    font-variant: small-caps;
+}
+
+footer p{
+    font-size: 16px;
+}
+
+main{
+    display: flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+section{
+    flex: 1 1 45%;
+    padding:20px;
+    background-color: white;
+    border-radius: 10px;
+}
+section h2{
+    text-align: center;
+}
+aside{
+    flex: 1 1 25%;
+    padding: 20px;
+    background-color: bisque;
+    background-image:url(../images/Flag_of_the_United_Kingdom.svg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+aside h2{
+    background-color: rgba(0, 0, 0, 0.9);
+}
+aside ul li{
+    background-color: rgba(0, 0, 0, 0.9);
+}
+footer{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align:center;
+    background-image: linear-gradient(270deg, rgb(144, 0, 0),rgb(0, 0, 129));
+    color:white;
+
+}
+
+main img.mainimg{
+    border: 2px solid navy;
+    width: 50%;
+    max-width: 100%;
+    height:auto;
+    float:left;
+    margin-right:20px;
+
+}
+figcaption{
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+q{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+ul li{
+    list-style-type: none;
+    line-height: 2;
+}
+ul > li > a{
+    text-decoration: none;
+    color: rgb(0, 120, 0);
+}
+
+aside a:hover{
+    color: orange;
+}
+
+nav ul{
+    display:flex;
+    justify-content: center;
+    gap:20px;
+    padding: 10px 0;
+    list-style: none;
+    margin:0px;
+}
+nav li{
+    position:relative;
+}
+nav a{
+    text-decoration: none;
+    color:black;
+    padding: 5px 10px;
+}
+nav ul ul{
+    display: none;
+    position:absolute;
+    top:100%;
+    left: 0;
+    background-color: lightgray;
+    border:1px solid black;
+    padding:10px 0px;
+    min-width: 160px;
+    list-style: none;
+}
+nav li:hover > ul{
+    display:block;
+    background-color: rgb(64, 64, 64);
+    border-radius: 5px;
+}
+nav ul ul li a{
+    color:white;
+    padding:10px 20px;
+    display: block;
+}
+nav a:hover{
+    color:red;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top: 20px;
+}
+table, th, td{
+    border:1px solid black;
+}
+
+th, td{
+    padding:10px;
+    text-align:left;
+}
+th{
+    background-color: rgb(161, 0, 161);
+    color:white;
+}
+tr:nth-child(even){
+    background-color: rgb(235, 235, 235);
+}
+tr:hover{
+    background-color: rgb(204, 203, 203);
+}
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap:10px;
+    justify-items: center;
+    align-items:center;
+    margin-top: 10px;
+}
+.gallery figure{
+    text-align: center;
+    border-radius: 5px;
+    padding:10px;
+    
+}
+.gallery img{
+    width:300px;
+    border:1px solid black;
+    border-radius:5px;
+}
+.gallery figcaption{
+    margin-top: 5px;
+    font-variant: small-caps;
+    font-weight: bolder;
+}
+
+
+@media (max-width:768px){
+    main {
+        flex-direction: column;
+    }
+    section, aside{
+        flex: 1 1 100%;
+    }
+    aside{
+        background-image:url(../images/360_F_845099651_0Po14e25JO4OEBl0pFwvbmGQVQ7iYw92.jpg);
+        background-size: cover;
+    
+    }
+    main img.mainimg{
+        width:100%;
+        max-width: 100%;
+    }
+    .gallery{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(max-width:480px){
+    h1, h2{
+        font-size:1.5rem;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    nav li{
+        margin-bottom: 10px;
+    }
+    aside{
+        background-image:url(../images/depositphotos_90778748-stock-photo-great-britain-flag-united-kingdom.jpg);
+        background-size:cover;
+    }
+
+    .gallery{
+        grid-template-columns: 1fr;
+    }
+}
